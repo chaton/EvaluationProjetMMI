@@ -25,4 +25,11 @@ le travail préliminaire implique
 - ajout des enseignants
 - ajout des compétences (gisement de donnée)
 - ajout des AC
+<<<<<<< HEAD
 - ajout des relations
+=======
+- ajout des relations
+
+>>>>>>> chaton
+
+

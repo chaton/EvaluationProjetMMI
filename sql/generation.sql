@@ -80,44 +80,44 @@ UrlParcours_Parcours VARCHAR(80),
 PRIMARY KEY (IdParcours_Parcours)) ENGINE=InnoDB;
 
 DROP TABLE IF EXISTS met_en_oeuvre ;
-CREATE TABLE met_en_oeuvre (IdEnseignement_Enseignement INT AUTO_INCREMENT NOT NULL,
+CREATE TABLE met_en_oeuvre (IdEnseignement_Enseignement INT NOT NULL,
 IdCompetence_Competence_UE INT NOT NULL,
 Coefficient_MetEnOeuvre FLOAT,
 PRIMARY KEY (IdEnseignement_Enseignement,
  IdCompetence_Competence_UE)) ENGINE=InnoDB;
 
 DROP TABLE IF EXISTS utilise ;
-CREATE TABLE utilise (IdEnseignement_Enseignement INT AUTO_INCREMENT NOT NULL,
+CREATE TABLE utilise (IdEnseignement_Enseignement INT NOT NULL,
 IdAc_AC INT NOT NULL,
 PRIMARY KEY (IdEnseignement_Enseignement,
  IdAc_AC)) ENGINE=InnoDB;
 
 DROP TABLE IF EXISTS realise ;
-CREATE TABLE realise (IdEtudiant_Etudiant INT AUTO_INCREMENT NOT NULL,
+CREATE TABLE realise (IdEtudiant_Etudiant INT NOT NULL,
 IdGroupe_Groupe INT NOT NULL,
 PRIMARY KEY (IdEtudiant_Etudiant,
  IdGroupe_Groupe)) ENGINE=InnoDB;
 
 DROP TABLE IF EXISTS contribue ;
-CREATE TABLE contribue (IdEnseignement_Enseignement INT AUTO_INCREMENT NOT NULL,
+CREATE TABLE contribue (IdEnseignement_Enseignement INT NOT NULL,
 IdEnseignant_Enseignant INT NOT NULL,
 PRIMARY KEY (IdEnseignement_Enseignement,
  IdEnseignant_Enseignant)) ENGINE=InnoDB;
 
 DROP TABLE IF EXISTS participe_jury ;
-CREATE TABLE participe_jury (IdEnseignant_Enseignant INT AUTO_INCREMENT NOT NULL,
+CREATE TABLE participe_jury (IdEnseignant_Enseignant INT NOT NULL,
 IdEval_Eval INT NOT NULL,
 PRIMARY KEY (IdEnseignant_Enseignant,
  IdEval_Eval)) ENGINE=InnoDB;
 
 DROP TABLE IF EXISTS a_valide ;
-CREATE TABLE a_valide (IdEtudiant_Etudiant INT AUTO_INCREMENT NOT NULL,
+CREATE TABLE a_valide (IdEtudiant_Etudiant INT NOT NULL,
 IdNiveau_Niveau INT NOT NULL,
 PRIMARY KEY (IdEtudiant_Etudiant,
  IdNiveau_Niveau)) ENGINE=InnoDB;
 
 DROP TABLE IF EXISTS specialite ;
-CREATE TABLE specialite (IdEnseignant_Enseignant INT AUTO_INCREMENT NOT NULL,
+CREATE TABLE specialite (IdEnseignant_Enseignant INT NOT NULL,
 IdParcours_Parcours INT NOT NULL,
 PRIMARY KEY (IdEnseignant_Enseignant,
  IdParcours_Parcours)) ENGINE=InnoDB;
