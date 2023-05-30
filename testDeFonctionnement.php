@@ -1,9 +1,10 @@
 <?php
 // Inclure le fichier de configuration
 require_once('config.php');
-
+print('Je suis passé par la');
 // Requête de test
 $sql = "SELECT * FROM Etudiant";
+print('La requete est : '.$sql);
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
